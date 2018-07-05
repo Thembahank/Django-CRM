@@ -45,10 +45,17 @@ $ sudo apt-get install -y curl wget libpq-dev python3-dev gem ruby ruby-dev buil
 
 $ sudo gem install sass
 
+Install postgres
 
-If you cloned the package from git use virtualenv to install requirements::
+$ sudo apt-get install postgresql postgresql-contrib
 
-    pip install -r requirements.txt
+Use virtualenv to install requirements::
+
+$ sudo -H pip install virtualenv
+$ virtualenv ~/.virtualenv/bedrijfspand
+$ source ~/.virtualenv/bedrijfspand/bin/activate
+$ cd /vagrant/
+$ pip install -r requirements.txt
 
 Visit our Django web development page [Here](https://micropyramid.com/django-ecommerce-development/)
 
