@@ -49,6 +49,8 @@ Install postgres
 
 $ sudo apt-get install postgresql postgresql-contrib
 
+
+
 Use virtualenv to install requirements::
 
 $ sudo -H pip install virtualenv
@@ -56,6 +58,11 @@ $ virtualenv ~/.virtualenv/bedrijfspand
 $ source ~/.virtualenv/bedrijfspand/bin/activate
 $ cd /vagrant/
 $ pip install -r requirements.txt
+
+if you get an error on WIndows machine when installing django compress
+pip install rcssmin --install-option="--without-c-extensions"
+pip install rjsmin --install-option="--without-c-extensions"
+pip install django-compressor --upgrade
 
 Visit our Django web development page [Here](https://micropyramid.com/django-ecommerce-development/)
 
