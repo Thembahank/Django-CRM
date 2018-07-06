@@ -45,24 +45,22 @@ $ sudo apt-get install -y curl wget libpq-dev python3-dev gem ruby ruby-dev buil
 
 $ sudo gem install sass
 
-Install postgres
-
+## Install postgres and create correct user that matches your database settings
 $ sudo apt-get install postgresql postgresql-contrib
-
-
+$ sudo -u postgres createuser -P -e username
 
 Use virtualenv to install requirements::
 
 $ sudo -H pip install virtualenv
-$ virtualenv ~/.virtualenv/bedrijfspand
-$ source ~/.virtualenv/bedrijfspand/bin/activate
-$ cd /vagrant/
+$ virtualenv ~/.virtualenv/django-crm
+$ source ~/.virtualenv/django-crm/bin/activate
 $ pip install -r requirements.txt
 
 if you get an error on WIndows machine when installing django compress
 pip install rcssmin --install-option="--without-c-extensions"
 pip install rjsmin --install-option="--without-c-extensions"
 pip install django-compressor --upgrade
+
 
 Visit our Django web development page [Here](https://micropyramid.com/django-ecommerce-development/)
 
