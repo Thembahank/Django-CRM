@@ -1,5 +1,7 @@
 from django.conf.urls import url, include
 from django.contrib.auth import views
+from django.conf import settings
+from django.conf.urls.static import static
 app_name = 'crm'
 
 
@@ -14,4 +16,4 @@ urlpatterns = [
     url(r'^emails/', include('emails.urls', namespace='emails')),
     # url(r'^planner/', include('planner.urls', namespace='planner')),
     url(r'^logout/$', views.logout, {'next_page': '/login/'}, name='logout'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
