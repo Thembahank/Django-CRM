@@ -142,14 +142,14 @@ MEDIA_URL = '/media/'
 AUTH_USER_MODEL = 'common.User'
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (BASE_DIR + '/static',)
+STATICFILES_DIRS = (BASE_DIR + 'static',)
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'compressor.finders.CompressorFinder',
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 COMPRESS_ROOT = BASE_DIR + '/static/'
 COMPRESS_URL = STATIC_URL
