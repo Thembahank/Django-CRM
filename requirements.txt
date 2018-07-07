@@ -8,3 +8,4 @@ coverage
 pipenv
 whitenoise
 django_heroku
+gunicorn
