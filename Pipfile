@@ -6,6 +6,15 @@ verify_ssl = true
 [packages]
 gunicorn = "*"
 whitenoise = "*"
+django-simple-pagination = "==1.1.8"
+pytz = "==2018.3"
+"psycopg2-binary" = "==2.7.4"
+redis = "*"
+coverage = "*"
+pipenv = "*"
+django-heroku = "*"
+Django = "==2.0.1"
+django_compressor = "==2.2"
 
 [dev-packages]
 
