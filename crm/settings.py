@@ -149,7 +149,8 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 COMPRESS_ROOT = BASE_DIR + '/static/'
 COMPRESS_URL = STATIC_URL
@@ -160,8 +161,6 @@ COMPRESS_REBUILD_TIMEOUT = 5400
 
 
 COMPRESS_OUTPUT_DIR = 'CACHE'
-COMPRESS_URL = STATIC_URL
-COMPRESS_ENABLED = True
 
 COMPRESS_PRECOMPILERS = (
     ('text/less', 'lessc {infile} {outfile}'),

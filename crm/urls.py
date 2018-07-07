@@ -16,4 +16,4 @@ urlpatterns = [
     url(r'^emails/', include('emails.urls', namespace='emails')),
     # url(r'^planner/', include('planner.urls', namespace='planner')),
     url(r'^logout/$', views.logout, {'next_page': '/login/'}, name='logout'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
